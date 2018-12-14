@@ -1,6 +1,10 @@
 $(document).ready(function () {
 
 
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
     function searchBandsInTown(artist) {
 
 
@@ -13,6 +17,7 @@ $(document).ready(function () {
             })
             .then(function (response) {
                 console.log(response)
+                var newdiv = $("<div>")
 
                 for (var i = 0; i < response.length; i++) {
                     var offersUrl
@@ -23,18 +28,27 @@ $(document).ready(function () {
                     } else {
                         offersUrl = "no offers";
                     }
-
+                    var lineup = response[i].lineup[0]
                     var venue = response[i].venue
-                    var dateOfPerformance = response[i].datetime;
-                    dateOfPerformance = moment(dateOfPerformance, "YYYY-MM-DD").format("MM/DD/YYYY")
+                    var dateOfPerformance = moment(response[i].datetime, "YYYY-MM-DD").format("MM/DD/YYYY")
                     var venueRegion = venue.region
                     var venueCity = venue.city;
                     var venueName = venue.name;
                     console.log(dateOfPerformance)
+                    console.log(lineup)
                     console.log(venueRegion, venueCity, venueName);
                     console.log(offersUrl)
                     console.log("---------------------------------")
+                    newdiv.append(`${dateOfPerformance}
+                    State: ${venueRegion} City: ${venueCity} Venue: ${venueName}`)
                 }
+
+                var popoverText = `<div>${dateOfPerformance} </div>
+                <div>State: ${venueRegion} City: ${venueCity} Venue: ${venueName}</div>`
+
+                $("#bandPopover").text(lineup);
+                $("#bandPopover").attr("data-content", popoverText)
+                $(".contaner").append(newdiv)
             });
     }
 
@@ -50,6 +64,7 @@ $(document).ready(function () {
     //     console.log(queryURL);
     // }
     // musixmatch()
+
     searchBandsInTown("Chain Smokers")
 
 })
