@@ -1,16 +1,14 @@
 $(document).ready(function () {
 
-
+    //function to use popovers
     $(function () {
         $('[data-toggle="popover"]').popover()
     })
 
+    // ajax call to get bands in town info
     function searchBandsInTown(artist) {
         var newdiv = $("<div>")
-
-
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=project1UT13543&date=upcoming"
-
 
         $.ajax({
                 url: queryURL,
@@ -49,7 +47,7 @@ $(document).ready(function () {
             });
     }
 
-
+    //function to intergrate musixmatch at a later date
     // function musixmatch() {
 
     //     var apikey = "45b31d2fda49ed69056977618911c164";
