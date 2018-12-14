@@ -15,18 +15,18 @@ $(document).ready(function () {
                 console.log(response)
 
                 for (var i = 0; i < response.length; i++) {
-
-                    for (var j = 0; j < response[i].offers.length; j++) {
-                        if (response[i].offers[j].length = 0) {
-                            var offersUrl = "No offer Website"
+                    var offersUrl
+                    if (response[i].offers.length !== 0) {
+                        for (j = 0; j < response[i].offers.length; j++) {
+                            offersUrl = response[i].offers[j].url;
                         }
-                        offersUrl = response[i].offers[j].url;
-                        // console.log(offersUrl)
-
+                    } else {
+                        offersUrl = "no offers";
                     }
 
                     var venue = response[i].venue
                     var dateOfPerformance = response[i].datetime;
+                    dateOfPerformance = moment(dateOfPerformance, "YYYY-MM-DD").format("MM/DD/YYYY")
                     var venueRegion = venue.region
                     var venueCity = venue.city;
                     var venueName = venue.name;
