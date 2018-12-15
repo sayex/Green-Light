@@ -13,7 +13,7 @@ $(document).ready(function () {
     function popoutButton(response) {
         var popoverText = ""
         for (var i = 0; i < response.length; i++) {
-            var offersUrl
+            var offersUrl;
             if (response[i].offers.length !== 0) {
                 for (j = 0; j < response[i].offers.length; j++) {
                     offersUrl = response[i].offers[j].url;
@@ -21,10 +21,10 @@ $(document).ready(function () {
             } else {
                 offersUrl = "no offers";
             }
-            var lineup = response[i].lineup[0]
-            var venue = response[i].venue
+            var lineup = response[i].lineup[0];
+            var venue = response[i].venue;
             var dateOfPerformance = moment(response[i].datetime, "YYYY-MM-DD").format("MM/DD/YYYY")
-            var venueRegion = venue.region
+            var venueRegion = venue.region;
             var venueCity = venue.city;
             var venueName = venue.name;
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
         }
 
         $("#bandPopover").text(lineup);
-        $("#bandPopover").attr("data-content", popoverText)
+        $("#bandPopover").attr("data-content", popoverText);
     }
 
     // ajax call to get bands in town info
@@ -48,12 +48,12 @@ $(document).ready(function () {
             })
             .then(function (response) {
 
-                popoutButton(response)
+                popoutButton(response);
 
             });
     }
 
-    searchBandsInTown("Chain Smokers")
+    searchBandsInTown("Chain Smokers");
 
     //function to intergrate musixmatch at a later date
     // function musixmatch() {
