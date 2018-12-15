@@ -28,7 +28,7 @@ $(document).ready(function () {
             var venueCity = venue.city;
             var venueName = venue.name;
 
-            popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}this is a test of this venu</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
+            popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
 
         }
 
