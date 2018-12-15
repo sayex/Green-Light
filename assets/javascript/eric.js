@@ -8,6 +8,7 @@ $(document).ready(function () {
     // ajax call to get bands in town info
     function searchBandsInTown(artist) {
         var newdiv = $("<div>")
+        var popoverText
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=project1UT13543&date=upcoming"
 
         $.ajax({
@@ -37,13 +38,16 @@ $(document).ready(function () {
                     console.log(venueRegion, venueCity, venueName);
                     console.log(offersUrl)
                     console.log("---------------------------------")
+                    var newText = `<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`;
+
                     newdiv.append(`<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`)
+
+                    popoverText = popoverText + `<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`
+
                 }
-                var popoverText = `<div>${dateOfPerformance}</div><div>State:${venueRegion}City:${venueCity}Venue:${venueName}</div>`
 
                 $("#bandPopover").text(lineup);
                 $("#bandPopover").attr("data-content", popoverText)
-                $(".contaner").append(newdiv)
             });
     }
 
