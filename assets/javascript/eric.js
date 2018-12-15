@@ -2,13 +2,14 @@ $(document).ready(function () {
 
     //function to use popovers
     $(function () {
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"]').popover({
+            container: 'body'
+        });
     })
 
     // ajax call to get bands in town info
     function searchBandsInTown(artist) {
-        var newdiv = $("<div>")
-        var popoverText
+        var popoverText = ""
         var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=project1UT13543&date=upcoming"
 
         $.ajax({
@@ -16,7 +17,6 @@ $(document).ready(function () {
                 method: "GET"
             })
             .then(function (response) {
-                console.log(response)
 
                 for (var i = 0; i < response.length; i++) {
                     var offersUrl
@@ -33,16 +33,8 @@ $(document).ready(function () {
                     var venueRegion = venue.region
                     var venueCity = venue.city;
                     var venueName = venue.name;
-                    console.log(dateOfPerformance)
-                    console.log(lineup)
-                    console.log(venueRegion, venueCity, venueName);
-                    console.log(offersUrl)
-                    console.log("---------------------------------")
-                    var newText = `<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`;
 
-                    newdiv.append(`<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`)
-
-                    popoverText = popoverText + `<ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul>`
+                    popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}this is a test of this venu</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
 
                 }
 
