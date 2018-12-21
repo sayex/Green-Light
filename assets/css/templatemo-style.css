@@ -39,7 +39,7 @@ body, html {
 .page-heading .heading-content h1 {
   font-size: 32px;
   text-transform: uppercase;
-  color: #39FF14;
+  color: #13E133;
   letter-spacing: 1px;
   background-color: rgba(250,250,250,0.1);
   display: inline-block;
@@ -63,7 +63,7 @@ nav .logo a {
   font-size: 30px;
   line-height: 80px;
   text-transform: uppercase;
-  color: #39FF14;
+  color: #13E113;
   text-decoration: none;
   letter-spacing: 0.5px;
 }
