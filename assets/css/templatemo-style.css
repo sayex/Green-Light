@@ -89,37 +89,46 @@ nav .search-container {
   margin: 9px;
   border-radius: 5px;
   cursor: pointer;
-  float: left;
+  float: right;
+  margin-right: 30px;
   width: 80%;
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
 }
 
+/* SEARCH FIELD */
 nav input[type=text] {
   padding: 6px;
   margin-top: 9px;
   font-size: 20px;
+  color: white;
   border-radius: 5px;
   border: 1px solid #fff;
-  background: rgba(250,250,250,0.2);
+  background: transparent;
 }
 
+/* SUBMIT BUTTON */
 nav .search-container button {
   padding: 6px;
   margin-top: 9px;
   margin-right: 16px;
   margin-left: 5px;
-  background: rgba(250,250,250,0.2);
+  background: transparent;
   color: #fff;
   font-size: 20px;
+  font-weight: 390;
   border-radius: 5px;
   border: 1px solid #fff;
   cursor: pointer;
+  position: relative;
+  transition: background 0.5s;
+  /* -webkit-overflow-scrolling: touch; */
 }
 
 nav .search-container button:hover {
-  background: #ccc;
+  /* background: #ccc; */
+  background: rgba(250, 250, 250, 0.2);
 }
 
 @media screen and (max-width: 600px) {
@@ -139,7 +148,7 @@ nav .search-container button:hover {
   }
 }
 
-.menu-icon {
+/* .menu-icon {
   background: transparent;
   border: 1px solid #fff;
   width: 50px;
@@ -149,9 +158,9 @@ nav .search-container button:hover {
   cursor: pointer;
   transition: background 0.5s;
   border-radius: 5px;
-}
+} */
 
-.menu-icon span,
+/* .menu-icon span,
 .menu-icon span:before,
 .menu-icon span:after {
   cursor: pointer;
@@ -165,38 +174,38 @@ nav .search-container button:hover {
   display: block;
   content: '';
   transition: all 0.5s ease-in-out;
-}
+} */
 
-.menu-icon span:before {
+/* .menu-icon span:before {
   left: 0;
   top: -10px;
-}
+} */
 
-.menu-icon span:after {
+/* .menu-icon span:after {
   left: 0;
   top: 10px;
-}
+} */
 
-.menu-icon.active {
+/* .menu-icon.active {
   background: rgba(250,250,250,0.2);
-}
+} */
 
-.menu-icon.active span {
+/* .menu-icon.active span {
   background-color: transparent;
-}
+} */
 
-.menu-icon.active span:before,
+/* .menu-icon.active span:before,
 .menu-icon.active span:after {
   top: 0;
-}
+} */
 
-.menu-icon.active span:before {
+/* .menu-icon.active span:before {
   transform: rotate(135deg);
-}
+} */
 
-.menu-icon.active span:after {
+/* .menu-icon.active span:after {
   transform: rotate(-135deg);
-}
+} */
 
 /* MENU */
 .overlay-menu {
@@ -303,7 +312,8 @@ nav .search-container button:hover {
 
 #video-container .video-overlay {
   z-index: 9999;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
+  /* background: transparent; */
   width: 100%;
 }
 
@@ -324,7 +334,7 @@ nav .search-container button:hover {
 }
 
 #video-container .video-content .inner h1 {
-  font-size: 64px;
+  font-size: 66px;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
@@ -339,7 +349,7 @@ nav .search-container button:hover {
 
 #video-container .video-content .inner p {
   color: #fff;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 200;
   letter-spacing: 1.5px;
   text-align: center;
