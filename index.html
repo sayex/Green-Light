@@ -14,15 +14,9 @@
   <link rel="stylesheet" href="assets/css/fontAwesome.css">
   <link rel="stylesheet" href="assets/css/light-box.css">
   <link rel="stylesheet" href="assets/css/templatemo-style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="assets/javascript/auth.js"></script>
 
   <title>GREEN LIGHT</title>
 </head>
@@ -35,9 +29,12 @@
       <div class="logo">
           <a href="index.html">Green<em>Light</em></a>
       </div>
+      <!-- <div class="artists">
+        <a tabindex="0" class="btn btn-lg btn-secondary" id="bandPopover" role="button" data-html="true" data-toggle="popover" data-trigger="focus" title="Upcoming Concerts" data-content=""></a>
+      </div> -->
       <div class="search-container">
         <input type="text" id="search" placeholder="Search.." name="search">
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" class="scrollTo" data-scrollTo="portfolio" id="submit">Submit</button>
       </div>
       <div class="menu-icon">
       <span></span>
@@ -50,7 +47,6 @@
           <div class="inner">
             <h1><em>Welcome to</em> Green<em>Light</em></h1>
             <p>YOUR <strong>GREEN</strong>LIGHT ACCESS TO YOUR FAVORITE ARTISTS</p>
-            <!-- <p>Homepage with full-width image gallery</p> -->
               <div class="scroll-icon">
                   <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="assets/img/scroll-icon.png" alt=""></a>
               </div>    
@@ -63,7 +59,7 @@
 
 
   <div class="full-screen-portfolio" id="portfolio">
-      <div class="container-fluid">
+      <div class="container-fluid" id="main-container">
         </div>
   </div>
 
@@ -88,7 +84,7 @@
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header">
-        <h3 class="header-title">Say hello to <em>GREEN LIGHT</em></h3>
+        <h3 class="header-title"><em>Say hello to</em> GREEN<em>LIGHT</em></h3>
         <div class="close-btn"><img src="assets/img/close_contact.png" alt=""></div>    
       </div>
       <!-- Modal Body -->
@@ -155,14 +151,16 @@
     </div>
   </section>
 
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- SCRIPTS -->
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
   
+  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="assets/javascript/auth.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
-  <!-- <script src="assets/javascript/stan.js"></script> -->
   
   <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   

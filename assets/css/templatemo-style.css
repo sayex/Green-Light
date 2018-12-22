@@ -39,7 +39,7 @@ body, html {
 .page-heading .heading-content h1 {
   font-size: 32px;
   text-transform: uppercase;
-  color: #39FF14;
+  color: #13E133;
   letter-spacing: 1px;
   background-color: rgba(250,250,250,0.1);
   display: inline-block;
@@ -63,7 +63,7 @@ nav .logo a {
   font-size: 30px;
   line-height: 80px;
   text-transform: uppercase;
-  color: #39FF14;
+  color: #13E113;
   text-decoration: none;
   letter-spacing: 0.5px;
 }
@@ -74,52 +74,74 @@ nav .logo em {
 }
 
 nav {
-  background: rgba(250,250,250,0.2);
+  background: rgba(250,250,250,0.5);
+  /* background: transparent; */
   height: 80px;
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 300;
-  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+  /* box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5); */
 }
 
-nav .search-container {
+/* ARTIST BUTTON */
+nav .artists {
+  /* float: right; */
+  /* margin-right: 200px; */
   font-size: 20px;
-  margin: 9px;
+  margin-top: 9px;
   border-radius: 5px;
   cursor: pointer;
-  float: left;
-  width: 80%;
+}
+
+/* SEARCH CONTAINER */
+nav .search-container {
+  font-size: 20px;
+  float: right; */
+  margin-right: 30px;
+  margin-top: 9px;
+  /* width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
+  width: 50px;
+  height: 50px;
+  margin: 9px 39px 0 auto;
+  position: relative;
 }
 
+/* SEARCH FIELD */
 nav input[type=text] {
   padding: 6px;
-  margin-top: 9px;
-  font-size: 20px;
+  /* margin-top: 9px; */
+  font-weight: 280;
+  color: #fff;
   border-radius: 5px;
   border: 1px solid #fff;
-  background: rgba(250,250,250,0.2);
+  background: transparent;
 }
 
+/* SUBMIT BUTTON */
 nav .search-container button {
   padding: 6px;
-  margin-top: 9px;
+  /* margin-top: 9px; */
   margin-right: 16px;
   margin-left: 5px;
-  background: rgba(250,250,250,0.2);
+  font-weight: 300;
   color: #fff;
-  font-size: 20px;
   border-radius: 5px;
   border: 1px solid #fff;
+  background: transparent;
   cursor: pointer;
+  position: relative;
+  transition: background 0.5s;
+  /* -webkit-overflow-scrolling: touch; */
 }
 
 nav .search-container button:hover {
-  background: #ccc;
+  /* background: #ccc; */
+  background: rgba(250, 250, 250, 0.2);
 }
 
 @media screen and (max-width: 600px) {
@@ -139,7 +161,7 @@ nav .search-container button:hover {
   }
 }
 
-.menu-icon {
+/* .menu-icon {
   background: transparent;
   border: 1px solid #fff;
   width: 50px;
@@ -149,9 +171,9 @@ nav .search-container button:hover {
   cursor: pointer;
   transition: background 0.5s;
   border-radius: 5px;
-}
+} */
 
-.menu-icon span,
+/* .menu-icon span,
 .menu-icon span:before,
 .menu-icon span:after {
   cursor: pointer;
@@ -165,38 +187,38 @@ nav .search-container button:hover {
   display: block;
   content: '';
   transition: all 0.5s ease-in-out;
-}
+} */
 
-.menu-icon span:before {
+/* .menu-icon span:before {
   left: 0;
   top: -10px;
-}
+} */
 
-.menu-icon span:after {
+/* .menu-icon span:after {
   left: 0;
   top: 10px;
-}
+} */
 
-.menu-icon.active {
+/* .menu-icon.active {
   background: rgba(250,250,250,0.2);
-}
+} */
 
-.menu-icon.active span {
+/* .menu-icon.active span {
   background-color: transparent;
-}
+} */
 
-.menu-icon.active span:before,
+/* .menu-icon.active span:before,
 .menu-icon.active span:after {
   top: 0;
-}
+} */
 
-.menu-icon.active span:before {
+/* .menu-icon.active span:before {
   transform: rotate(135deg);
-}
+} */
 
-.menu-icon.active span:after {
+/* .menu-icon.active span:after {
   transform: rotate(-135deg);
-}
+} */
 
 /* MENU */
 .overlay-menu {
@@ -303,7 +325,8 @@ nav .search-container button:hover {
 
 #video-container .video-overlay {
   z-index: 9999;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
+  /* background: transparent; */
   width: 100%;
 }
 
@@ -324,7 +347,7 @@ nav .search-container button:hover {
 }
 
 #video-container .video-content .inner h1 {
-  font-size: 64px;
+  font-size: 66px;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
@@ -339,7 +362,7 @@ nav .search-container button:hover {
 
 #video-container .video-content .inner p {
   color: #fff;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 200;
   letter-spacing: 1.5px;
   text-align: center;
@@ -370,13 +393,13 @@ nav .search-container button:hover {
   position: relative;
 }
 
-.portfolio-item .hover-effect .hover-content {
+/* .portfolio-item .hover-effect .hover-content {
     position: absolute;
     text-align: left;
     width: 100%;
     bottom: 0;
     left: 0;
-}
+} */
 
 .full-screen-portfolio .portfolio-item h1 {
   position: relative;
@@ -628,7 +651,7 @@ footer a:hover {
 
 
 
-.masonry-portfolio .container-fluid {
+/* .masonry-portfolio .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
 }
@@ -718,19 +741,19 @@ footer a:hover {
 .masonry .item:hover p {
   opacity: 1;
   transform: translateY(0);
- }
+ } */
 
 
 
 
-.grid-portfolio {
+/* .grid-portfolio {
   padding: 65px 0px;
   background-color: #232323;
 }
 
 .grid-portfolio .portfolio-item {
   margin: 15px 0px;
-}
+} */
 
 .portfolio-item .hover-effect .hover-content {
     position: absolute;
@@ -738,10 +761,15 @@ footer a:hover {
     width: 100%;
     bottom: 5px;
     left: 0;
+    
+}
+
+.hover-content {
+  background: rgba(250,250,250,0.4) !important;
 }
 
 
-.grid-portfolio .portfolio-item h1 {
+/* .grid-portfolio .portfolio-item h1 {
   position: relative;
   font-size: 22px;
   text-transform: uppercase;
@@ -801,7 +829,7 @@ footer a:hover {
 
  .grid-portfolio .load-more-button a:hover {
   color: rgba(250,250,250,0.5);
- }
+ } */
 
 
 
@@ -915,7 +943,7 @@ footer a:hover {
 
 
 
-.pricing-tables {
+/* .pricing-tables {
   padding: 65px 0px;
   background-color: #232323;
 }
@@ -989,11 +1017,11 @@ footer a:hover {
 .pricing-tables .premium-item h4, .pricing-tables .premium-item span, .pricing-tables .premium-item ul li, .pricing-tables .premium-item .simple-btn a {
   color: #232323;
   border-color: #232323;
-}
+} */
 
 
 
-.blog-entries {
+/* .blog-entries {
   padding: 80px 0px;
   background-color: #232323;
 }
@@ -1211,7 +1239,7 @@ footer a:hover {
   border-radius: 0px;
   outline: none;
   border: none;
-}
+} */
 
 .sidebar-heding h2 {
   font-size: 20px;
@@ -1252,7 +1280,7 @@ footer a:hover {
   opacity: 0.5;
 }
 
-.recent-posts ul {
+/* .recent-posts ul {
   padding: 0;
   list-style: none;
 }
@@ -1323,7 +1351,7 @@ footer a:hover {
 .latest-gallery ul li img:hover {
   cursor: pointer;
   opacity: 0.5;
-}
+} */
 
 
 
