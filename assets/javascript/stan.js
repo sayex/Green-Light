@@ -38,7 +38,7 @@ console.log(access_token3);
           "Content-Type": "application/json",
          "Authorization": authHeader
         }
-    }).then(function(responseArtist) {
+    }).done(function(responseArtist) {
         $("#main-container").empty();
         var resultsArtist = responseArtist.items
         console.log(responseArtist);
@@ -46,6 +46,7 @@ console.log(access_token3);
         
         for (var i = 0; i < resultsArtist.length; i++) {  
           var albumId = resultsArtist[i].id;
+          console.log(albumId);
           tracks = trackSearch(albumId);
           console.log(tracks);
           var resultsAlbumUrl = resultsArtist[i].images[1].url;
@@ -68,7 +69,7 @@ console.log(access_token3);
             </div>
         </div>`
           
-          $("#main-container").prepend(newImg);
+          $("#main-container").append(newImg);
         }
         
     })
@@ -89,7 +90,7 @@ $.ajax({
       "Content-Type": "application/json",
      "Authorization": authHeader
     }
-}).then(function(responseTracks) {
+}).done(function(responseTracks) {
     var resultsTracks = responseTracks.items
     
     var trackName = resultsTracks[0].name;
