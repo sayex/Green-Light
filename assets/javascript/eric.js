@@ -1,8 +1,11 @@
 // get access token from spotify
-
+var auth = false;
 var access_token3 = "";
 if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
     access_token3 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
+    $("#login").hide();
+    $(".search-container").show();
+    auth = true;
 };
 
 // Link access token to spoitify webPlayback SDK
@@ -63,14 +66,17 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 $("#submit").on("click", function (event) {
     event.preventDefault();
-    var searchBands = $("#search").val()
+    var searchBands = $("#search").val();
     searchBandsInTown(searchBands);
     spotifySearch(searchBands);
-
+    $("#search").val("");
 })
 
 $(document).ready(function () {
     // listener for the submit button
+    if (!auth) {
+        $(".search-container").hide();
+    }
 
     //function to use popovers
     $(function () {

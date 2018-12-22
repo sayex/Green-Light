@@ -9,6 +9,7 @@ http://www.templatemo.com/tm-520-highway
 body {
   font-family: 'Kanit', sans-serif;
   height: 150vh;
+  background: black;
 }
 
 body::-webkit-scrollbar {
@@ -92,16 +93,21 @@ nav {
   justify-content: space-between;
 }
 
-/* SPOTIFY */
-/* #login {
-  position: absolute;
-  width: 50%;
-} */
+/* SPOTIFY & BANDS BUTTON*/
+#login, #bands {
+  position: fixed;
+  left: 50%;
+  top: 2.5rem;
+
+}
+
+/* SPOTIFY BUTTON */
+#spotify {
+
+}
 
 /* BANDS BUTTON */
-nav #bands {
-  /* float: right; */
-  /* margin-right: 200px; */
+#bands {
   font-size: 20px;
   margin-top: 9px;
   border-radius: 5px;
