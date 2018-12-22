@@ -38,39 +38,68 @@ console.log(access_token3);
           "Content-Type": "application/json",
          "Authorization": authHeader
         }
-    }).then(function(responseArtist) {
+    }).done(function(responseArtist) {
+        $("#main-container").empty();
         var resultsArtist = responseArtist.items
-
         console.log(responseArtist);
         
         
         for (var i = 0; i < resultsArtist.length; i++) {  
-        
+          var albumId = resultsArtist[i].id;
+          console.log(albumId);
+          tracks = trackSearch(albumId);
+          console.log(tracks);
           var resultsAlbumUrl = resultsArtist[i].images[1].url;
           var resultsAlbum = resultsArtist[i].external_urls.spotify;
           var albumName = resultsArtist[i].name;
-          var albumYear = resultsArtist[i].release_date;
 
            var newImg= `<div class=col-md-4 col-sm-6>
             <div class=portfolio-item>
-                <a href=${resultsAlbum} ><div class=thumb>
+                <a href=${resultsAlbum} target=_blank><div class=thumb>
+                <div class=image>
+                <img src=${resultsAlbumUrl}>
+                </div></a>
                     <div class=hover-effect>
                         <div class=hover-content>
                             <h1>${albumName}</h1>
-                            <p>Date released: ${albumYear}</p>
+                            <p id=tracks></p>
                         </div>
                     </div>
-                    <div class=image>
-                        <img src=${resultsAlbumUrl}>
-                    </div>
-                </div></a>
+                </div>
             </div>
         </div>`
-
-          $("#main-container").prepend(newImg);
+          
+          $("#main-container").append(newImg);
         }
         
     })
   })
 }
 
+
+//track search
+function trackSearch(albumId){
+var authHeader = "Bearer " + access_token3;
+var searchAlbumUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks";
+
+$.ajax({
+    url: searchAlbumUrl,
+    method: "GET",
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+     "Authorization": authHeader
+    }
+}).done(function(responseTracks) {
+    var resultsTracks = responseTracks.items
+    
+    var trackName = resultsTracks[0].name;
+
+    
+    // for (var i = 0; i < resultsTracks.length; i++) {  
+    
+
+    // }
+    return trackName;
+})
+}
