@@ -9,7 +9,7 @@ function spotifySearch(userSearch){
 var authHeader = "Bearer " + access_token3;
 console.log(authHeader);
 
-console.log(access_token4);
+console.log(access_token3);
   // "https://api.spotify.com/v1/search?q=Muse&type=track%2Cartist&market=US&limit=10&offset=5"
 
     var spotifyUrl = "https://api.spotify.com/v1/search?q=";
