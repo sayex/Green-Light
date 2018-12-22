@@ -112,8 +112,9 @@ function popoutButton(response) {
         popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
     }
 
-    $("#bandPopover").text(lineup);
+    $("#bandPopover").text("Tour Dates");
     $("#bandPopover").attr("data-content", popoverText);
+    $("#bandPopover").attr("popover-title", lineup);
 }
 
 // ajax call to get bands in town info
