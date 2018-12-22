@@ -9,6 +9,7 @@ http://www.templatemo.com/tm-520-highway
 body {
   font-family: 'Kanit', sans-serif;
   height: 150vh;
+  background: black;
 }
 
 body::-webkit-scrollbar {
@@ -54,6 +55,7 @@ body, html {
   font-weight: 200;
 }
 
+
 /* NAV BAR */
 nav .logo {
   /* float: left; */
@@ -69,8 +71,6 @@ nav .logo a {
   letter-spacing: 0.5px;
 }
 
-
-
 nav .logo em {
   font-style: normal;
   font-weight: 200;
@@ -79,10 +79,8 @@ nav .logo em {
 nav {
   /* background: rgba(250,250,250,0.5); */
   background: rgba(69,69,69,0.7);
-  /* background: transparent; */
   height: 80px;
   position: fixed;
-  /* position: relative; */
   width: 100%;
   left: 0;
   top: 0;
@@ -92,22 +90,58 @@ nav {
   justify-content: space-between;
 }
 
-/* SPOTIFY */
-/* #login {
-  position: absolute;
-  width: 50%;
-} */
 
-/* BANDS BUTTON */
-nav #bands {
-  /* float: right; */
-  /* margin-right: 200px; */
-  font-size: 20px;
-  margin-top: 9px;
+/* SPOTIFY LOGIN DIV */
+#login {
+  position: fixed;
+  left: 46%;
+}
+button[id=spotify]:focus {
+  background: transparent;
+  border: 0.5px solid #13E113;
+  outline: 1px #13E113;
+}
+#login a:link,
+#login a:visited {
+  color: #13E113;
+  background: transparent;
+}
+
+
+/* SPOTIFY BUTTON */
+#spotify {
+  left: 46%;
+  font-size: 17px;
+  margin-top: 26px;
   border-radius: 5px;
+  background: transparent;
   cursor: pointer;
 }
 
+
+/* TOUR DATES BUTTON */
+#bands {
+  position: fixed;
+  left: 48%;
+  font-size: 20px;
+  margin-top: 26px;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+
+a:link#bands {
+  color: #13E113;
+  background: transparent;
+}
+a:visited#bands {
+  color: #13E113;
+  background: transparent;
+}
+
+
+
+/* TOUR DATES POPOVER */
 .popover {
   max-width: 100%;
   background: rgba(0, 0, 0, 0.712);
@@ -136,6 +170,7 @@ nav #bands {
 ::-webkit-scrollbar {
   display: none;
 }
+
 
 /* SEARCH CONTAINER */
 nav .search-container {
@@ -187,7 +222,6 @@ nav .search-container button {
 }
 
 nav .search-container button:hover {
-  /* background: #ccc; */
   background: rgba(250, 250, 250, 0.2);
 }
 
@@ -212,6 +246,8 @@ input[type=text], button[type=submit]:focus {
   border: 1px solid #13E113;
   outline: 1px #13E113;
 }
+
+
 
 /* .menu-icon {
   background: transparent;

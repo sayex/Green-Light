@@ -1,8 +1,11 @@
 // get access token from spotify
-
+var auth = false;
 var access_token3 = "";
 if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
     access_token3 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
+    $("#login").hide();
+    $(".search-container").show();
+    auth = true;
 };
 
 // Link access token to spoitify webPlayback SDK
@@ -63,14 +66,17 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 $("#submit").on("click", function (event) {
     event.preventDefault();
-    var searchBands = $("#search").val()
+    var searchBands = $("#search").val();
     searchBandsInTown(searchBands);
     spotifySearch(searchBands);
-
+    $("#search").val("");
 })
 
 $(document).ready(function () {
     // listener for the submit button
+    if (!auth) {
+        $(".search-container").hide();
+    }
 
     //function to use popovers
     $(function () {
@@ -106,8 +112,9 @@ function popoutButton(response) {
         popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
     }
 
-    $("#bandPopover").text(lineup);
+    $("#bandPopover").text("Tour Dates");
     $("#bandPopover").attr("data-content", popoverText);
+    $("#bandPopover").attr("popover-title", lineup);
 }
 
 // ajax call to get bands in town info
