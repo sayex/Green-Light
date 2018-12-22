@@ -61,7 +61,8 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     player.connect();
 };
 
-$("#submit").on("click", function () {
+$("#submit").on("click", function (event) {
+    event.preventDefault();
     var searchBands = $("#search").val()
     searchBandsInTown(searchBands);
     spotifySearch(searchBands);
