@@ -39,6 +39,7 @@ console.log(access_token3);
          "Authorization": authHeader
         }
     }).then(function(responseArtist) {
+        $("#main-container").empty();
         var resultsArtist = responseArtist.items
 
         console.log(responseArtist);
