@@ -8,6 +8,7 @@ http://www.templatemo.com/tm-520-highway
 
 body {
   font-family: 'Kanit', sans-serif;
+  height: 150vh;
 }
 
 body::-webkit-scrollbar {
@@ -55,7 +56,7 @@ body, html {
 
 /* NAV BAR */
 nav .logo {
-  float: left;
+  /* float: left; */
   margin-left: 30px;
 }
 
@@ -68,6 +69,8 @@ nav .logo a {
   letter-spacing: 0.5px;
 }
 
+
+
 nav .logo em {
   font-style: normal;
   font-weight: 200;
@@ -79,14 +82,23 @@ nav {
   /* background: transparent; */
   height: 80px;
   position: fixed;
+  /* position: relative; */
   width: 100%;
   left: 0;
   top: 0;
   z-index: 300;
   /* box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5); */
+  display: flex;
+  justify-content: space-between;
 }
 
-/* ARTIST BUTTON */
+/* SPOTIFY */
+/* #login {
+  position: absolute;
+  width: 50%;
+} */
+
+/* BANDS BUTTON */
 nav #bands {
   /* float: right; */
   /* margin-right: 200px; */
@@ -94,6 +106,35 @@ nav #bands {
   margin-top: 9px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.popover {
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.712);
+  color: #13E113;
+}
+
+.popover-header {
+  text-align: center;
+  color: #fff;
+  background: black;
+}
+
+.popover-title {
+  background: rgba(0, 0, 0, 0.5);
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.popover-content {
+  max-height: 82rem;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* SEARCH CONTAINER */
