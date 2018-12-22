@@ -74,7 +74,8 @@ nav .logo em {
 }
 
 nav {
-  background: rgba(250,250,250,0.5);
+  /* background: rgba(250,250,250,0.5); */
+  background: rgba(69,69,69,0.7);
   /* background: transparent; */
   height: 80px;
   position: fixed;
@@ -86,7 +87,7 @@ nav {
 }
 
 /* ARTIST BUTTON */
-nav .artists {
+nav #bands {
   /* float: right; */
   /* margin-right: 200px; */
   font-size: 20px;
@@ -98,16 +99,16 @@ nav .artists {
 /* SEARCH CONTAINER */
 nav .search-container {
   font-size: 20px;
-  float: right; 
-  margin-right: 30px;
-  margin-top: 9px;
-  width: 30%;
+  /* float: right;  */
+  /* margin-right: 30px; */
+  /* margin-top: 9px; */
+  /* width: 30%; */
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
   width: 50px;
   height: 50px;
-  margin: 9px 39px 0 auto;
+  margin: 18px 39px 0 auto;
   position: relative; 
 }
 
@@ -122,6 +123,11 @@ nav input[type=text] {
   background: transparent;
 }
 
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
 /* SUBMIT BUTTON */
 nav .search-container button {
   padding: 6px;
@@ -134,7 +140,7 @@ nav .search-container button {
   border: 1px solid #fff;
   background: transparent;
   cursor: pointer;
-  position: relative;
+  /* position: relative; */
   transition: background 0.5s;
   /* -webkit-overflow-scrolling: touch; */
 }
@@ -159,6 +165,11 @@ nav .search-container button:hover {
   nav input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+input[type=text], button[type=submit]:focus {
+  border: 1px solid #13E113;
+  outline: 1px #13E113;
 }
 
 /* .menu-icon {
