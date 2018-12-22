@@ -1,19 +1,20 @@
-$(document).ready(function() {
 
-  var access_token4 = "";
-if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
-    access_token4 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
-};
+function spotifySearch(userSearch){
+   
+// var access_token4 = "";
+// if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
+//     access_token4 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
+// };
 
-var authHeader = "Bearer " + access_token4;
+var authHeader = "Bearer " + access_token3;
 console.log(authHeader);
 
 console.log(access_token4);
   // "https://api.spotify.com/v1/search?q=Muse&type=track%2Cartist&market=US&limit=10&offset=5"
 
     var spotifyUrl = "https://api.spotify.com/v1/search?q=";
-    var userSearch = "madonna";
-    var lastPartOfUrl = "&type=artist&market=US&limit=10&offset=0"
+    userSearch;
+    var lastPartOfUrl = "&type=artist&market=US&limit=9&offset=0"
 
 
     $.ajax({
@@ -27,7 +28,7 @@ console.log(access_token4);
     }).then(function(response) {
       var results = response.artists.items;
       var artistId = results[0].id;
-      var searchAlbumUrl = "https://api.spotify.com/v1/artists/" + artistId + "/albums?limit=10&include_groups=album"
+      var searchAlbumUrl = "https://api.spotify.com/v1/artists/" + artistId + "/albums?limit=9&include_groups=album"
 
       $.ajax({
         url: searchAlbumUrl,
@@ -35,7 +36,7 @@ console.log(access_token4);
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json",
-          "Authorization": authHeader
+         "Authorization": authHeader
         }
     }).then(function(responseArtist) {
         var resultsArtist = responseArtist.items
@@ -66,9 +67,10 @@ console.log(access_token4);
             </div>
         </div>`
 
-          $(".container-fluid").prepend(newImg);
+          $("#main-container").prepend(newImg);
         }
         
     })
   })
-}); 
+}
+
