@@ -93,7 +93,12 @@ nav {
 
 /* PLAYER */
 #player {
-
+  /* display: flex; */
+  align-self: center;
+  flex-direction: row;
+  justify-content: space-between;
+  display: inline-flex;
+  margin-left: 5%;
 }
 
 
@@ -101,6 +106,7 @@ nav {
 #login {
   position: fixed;
   left: 46%;
+  margin-top: 20px;
 }
 button[id=spotify]:focus {
   background: transparent;
@@ -141,8 +147,9 @@ button[id=spotify]:focus {
 }
 #bandPopover {
   color: #13E113;
-  font-size: 15px;
-  
+  font-size: 20px;
+  letter-spacing: 0.5px;
+
   /* background: transparent; */
 }
 
@@ -153,6 +160,7 @@ button[id=spotify]:focus {
   background: rgba(0, 0, 0, 0.712);
   color: #13E113;
 }
+.popover 
 
 .popover-header {
   text-align: center;
@@ -163,13 +171,14 @@ button[id=spotify]:focus {
 .popover-title {
   background: rgba(0, 0, 0, 0.5);
   font-family: 'Kanit', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
 }
 
 .popover-content {
-  max-height: 82rem;
+  max-height: 83rem;
   overflow: auto;
 }
 
@@ -256,8 +265,8 @@ input#submit {
 }
 
 input[type=text]:focus {
-  border: 1px solid #13E113;
-  outline: 1px #13E113;
+  border: 1.5px solid #13E113;
+  outline: 1.5px #13E113;
 }
 
 
