@@ -112,6 +112,7 @@ function trackSearch(albumId, albumCount) {
             p.attr("data-sampleUrl", trackSample);
             trackCounter++
             $("#album" + albumCount).append(p)
+            // $(".theSong").hide();
             console.log(trackSample);
         }
 
@@ -129,3 +130,13 @@ $(document).on("click", ".theSong", function(){
     </audio>`
     $("#player").append(theActualPlayer);
 })
+
+// $("h1").mouseenter($(".theSong").show()).mouseleave($(".theSong").hide());
+
+// function hideTracks() {
+//     $(".theSong").hide();
+// }
+
+// function showTracks () {
+//     $(".theSong").show();
+// }
