@@ -28,6 +28,7 @@
       <div class="logo">
           <a href="index.html">Green<em>Light</em></a>
       </div>
+      <div id="player"></div>
       <div id="bands">
         <a tabindex="0" id="bandPopover" role="button" data-html="true" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Upcoming Concerts" data-content=""></a>
       </div>
@@ -36,8 +37,9 @@
       </div>
       <form class="form-inline search-container">
         <input type="text" id="search" placeholder="Favorite Artist.." name="search">
-        <a class="scrollTo" id="search-scroll" data-scrollTo="portfolio" href="#">
-          <button type="submit" id="submit">Search</button>
+        <a class="scrollTo" data-scrollTo="portfolio" role="button" type="submit" href="#">
+            <input type="image" src="assets/img/scroll-icon.png" class="image" id="submit" alt="">
+          <!-- <button type="submit" id="submit">Search</button> -->
         </a>
       </form>
   </nav>
