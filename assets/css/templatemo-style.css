@@ -160,7 +160,9 @@ button[id=spotify]:focus {
   background: rgba(0, 0, 0, 0.712);
   color: #13E113;
 }
-.popover 
+.popover a:link {
+  color: #fff;
+}
 
 .popover-header {
   text-align: center;
