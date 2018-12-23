@@ -856,6 +856,11 @@ footer a:hover {
   background: rgba(250,250,250,0.4) !important;
 }
 
+.tracks {
+  columns: 2;
+  column-gap: 1px;
+}
+
 
 /* .grid-portfolio .portfolio-item h1 {
   position: relative;
