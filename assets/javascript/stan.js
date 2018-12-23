@@ -61,9 +61,8 @@ function spotifySearch(userSearch) {
                 </div></a>
                     <div class=hover-effect>
                         <div class=hover-content>
-                            <h1>${albumName}</h1>
-                            <div id=album${albumCount}>
-                            
+                            <h1>Album: ${albumName}</h1>
+                            <div class=tracks id=album${albumCount}>
                             </div>
                         </div>
                     </div>
@@ -81,6 +80,7 @@ function spotifySearch(userSearch) {
 
 //track search
 function trackSearch(albumId, albumCount) {
+    var trackCounter = 1
     var authHeader = "Bearer " + access_token3;
     var searchAlbumUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks";
 
@@ -93,18 +93,39 @@ function trackSearch(albumId, albumCount) {
             "Authorization": authHeader
         }
     }).done(function (responseTracks) {
+        
         var resultsTracks = responseTracks.items
-
-
-
-
+        // console.log(resultsTracks)
         for (var i = 0; i < resultsTracks.length; i++) {
             var trackName = resultsTracks[i].name;
-            var p = $("<p>")
-            p.text(trackName)
+            var trackSample = resultsTracks[i].preview_url;
+            // var audio = $("<audio>");
+            // audio.attr("controls", "");
+            // var source = $("<source>");
+            // source.attr("src", trackSample);
+            // source.attr("type", "audio/mp3");
+            // audio.append(source);
+            var p = $("<p>");
+            p.addClass("theSong");
+            p.text(trackCounter + ": " + trackName);
+            // p.append(audio);
+            p.attr("data-sampleUrl", trackSample);
+            trackCounter++
             $("#album" + albumCount).append(p)
-
+            console.log(trackSample);
         }
 
     })
 }
+
+$(document).on("click", ".theSong", function(){
+    $("#player").empty();
+    var sampleUrl = $(this).attr("data-sampleUrl");
+    // $("#player").attr("src", sampleUrl);
+    var theActualPlayer = `<audio controls>
+    <source id=player 
+    src=${sampleUrl} 
+    type=audio/mp3>
+    </audio>`
+    $("#player").append(theActualPlayer);
+})
