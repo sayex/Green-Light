@@ -58,10 +58,8 @@ body, html {
 
 /* NAV BAR */
 nav .logo {
-  /* float: left; */
   margin-left: 30px;
 }
-
 nav .logo a {
   font-size: 30px;
   line-height: 80px;
@@ -70,12 +68,10 @@ nav .logo a {
   text-decoration: none;
   letter-spacing: 0.5px;
 }
-
 nav .logo em {
   font-style: normal;
   font-weight: 200;
 }
-
 nav {
   /* background: rgba(250,250,250,0.5); */
   background: rgba(69,69,69,0.7);
@@ -106,7 +102,6 @@ nav {
 #login {
   position: fixed;
   left: 46%;
-  margin-top: 20px;
 }
 button[id=spotify]:focus {
   background: transparent;
@@ -119,9 +114,8 @@ button[id=spotify]:focus {
   background: transparent;
 }
 
-
 /* SPOTIFY BUTTON */
-#spotify {
+button#spotify {
   left: 46%;
   font-size: 17px;
   margin-top: 26px;
@@ -141,16 +135,12 @@ button[id=spotify]:focus {
   background: transparent;
   cursor: pointer;
 }
-#bandPopover:focus {
-  background: transparent;
-  outline: 1px #00FF00;
-}
 #bandPopover {
   color: #00FF00;
   font-size: 20px;
   letter-spacing: 0.5px;
-
-  /* background: transparent; */
+  text-transform: uppercase;
+  background: transparent;
 }
 
 
@@ -163,13 +153,11 @@ button[id=spotify]:focus {
 .popover a:link {
   color: #fff;
 }
-
 .popover-header {
   text-align: center;
   color: #fff;
   background: black;
 }
-
 .popover-title {
   background: rgba(0, 0, 0, 0.5);
   font-family: 'Kanit', sans-serif;
@@ -178,12 +166,10 @@ button[id=spotify]:focus {
   text-align: center;
   color: #fff;
 }
-
 .popover-content {
   max-height: 83rem;
   overflow: auto;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
