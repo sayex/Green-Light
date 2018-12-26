@@ -156,6 +156,13 @@ function searchBandsInTown(artist) {
 }
 
 
+$(document).on("mouseenter", ".portfolio-item", function () {
+    $(this).children().children().children().children(".tracks").show();
+}).on("mouseleave", ".portfolio-item", function () {
+    $(this).children().children().children().children(".tracks").hide();
+})
+
+
 
 //function to intergrate musixmatch at a later date
 // function musixmatch() {

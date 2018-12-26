@@ -62,6 +62,7 @@ function spotifySearch(userSearch) {
                     <div class=hover-effect>
                         <div class=hover-content>
                             <h1>Album: ${albumName}</h1>
+                            <p>click to listen to sample audio</p>
                             <div class=tracks id=album${albumCount}>
                             </div>
                         </div>
@@ -93,7 +94,7 @@ function trackSearch(albumId, albumCount) {
             "Authorization": authHeader
         }
     }).done(function (responseTracks) {
-        
+
         var resultsTracks = responseTracks.items
         // console.log(resultsTracks)
         for (var i = 0; i < resultsTracks.length; i++) {
@@ -117,9 +118,10 @@ function trackSearch(albumId, albumCount) {
         }
 
     })
+    $(".tracks").hide()
 }
 
-$(document).on("click", ".theSong", function(){
+$(document).on("click", ".theSong", function () {
     $("#player").empty();
     var sampleUrl = $(this).attr("data-sampleUrl");
     // $("#player").attr("src", sampleUrl);
