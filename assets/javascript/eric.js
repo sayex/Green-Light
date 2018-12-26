@@ -5,6 +5,7 @@ if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
     access_token3 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
     $("#login").hide();
     $(".search-container").show();
+    $("#search").focus();
     auth = true;
 };
 
