@@ -1,10 +1,11 @@
-// get access token from spotify
 var auth = false;
+// get access token from spotify
 var access_token3 = "";
 if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
     access_token3 = window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1]
     $("#login").hide();
     $(".search-container").show();
+    $("#search").focus();
     auth = true;
 };
 
@@ -66,10 +67,11 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
 $("#submit").on("click", function (event) {
     event.preventDefault();
+
     var searchBands = $("#search").val();
     searchBandsInTown(searchBands);
     spotifySearch(searchBands);
-    $("#search").val("");
+    $("#search").val("")
 })
 
 $(document).ready(function () {
@@ -92,27 +94,45 @@ $(document).ready(function () {
 //function to create popouttext in popover
 
 function popoutButton(response) {
-    var popoverText = ""
-    for (var i = 0; i < response.length; i++) {
-        var offersUrl;
-        if (response[i].offers.length !== 0) {
-            for (j = 0; j < response[i].offers.length; j++) {
-                offersUrl = response[i].offers[j].url;
+    console.log(response)
+    var popoverText = "";
+    var lineup = "";
+    var showTourDates = "Tour Dates";
+    if (response.length > 0) {
+
+
+        for (var i = 0; i < response.length; i++) {
+            var offersUrl;
+            if (response[i].offers.length !== 0) {
+                for (j = 0; j < response[i].offers.length; j++) {
+                    offersUrl = response[i].offers[j].url;
+                }
+            } else {
+                offersUrl = "no";
             }
-        } else {
-            offersUrl = "no offers";
+            lineup = response[i].lineup[0];
+            var venue = response[i].venue;
+            var dateOfPerformance = moment(response[i].datetime, "YYYY-MM-DD").format("MM/DD/YYYY")
+            var venueRegion = venue.region;
+            var venueCity = venue.city;
+            var venueName = venue.name;
+
+            popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li>`
+
+            if (offersUrl !== "no") {
+                var venueLink = `<a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`
+            } else {
+                var venueLink = `</li></ul></div>`
+            }
+            popoverText = popoverText + venueLink
         }
-        var lineup = response[i].lineup[0];
-        var venue = response[i].venue;
-        var dateOfPerformance = moment(response[i].datetime, "YYYY-MM-DD").format("MM/DD/YYYY")
-        var venueRegion = venue.region;
-        var venueCity = venue.city;
-        var venueName = venue.name;
+    } else {
+        popoverText = ""
+        lineup = ""
+        showTourDates = ""
 
-        popoverText = popoverText + `<div id="popoverText"><ul><li>${dateOfPerformance}</li><li><b> State:</b> ${venueRegion} <b>City:</b> ${venueCity} <b>Venue:</b> ${venueName}</li><li><a href="${offersUrl}" target= "_blank">Tickets</a></li></ul></div>`;
     }
-
-    $("#bandPopover").text("Tour Dates");
+    $("#bandPopover").text(showTourDates);
     $("#bandPopover").attr("data-content", popoverText);
     $("#bandPopover").attr("popover-title", lineup);
 }
@@ -134,6 +154,13 @@ function searchBandsInTown(artist) {
 
         });
 }
+
+
+$(document).on("mouseenter", ".portfolio-item", function () {
+    $(this).children().children().children().children(".tracks").show();
+}).on("mouseleave", ".portfolio-item", function () {
+    $(this).children().children().children().children(".tracks").hide();
+})
 
 
 
