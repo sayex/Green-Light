@@ -489,10 +489,12 @@ h1 {
   color: #fff;
   display: inline-block;
   padding-left: 20px;
-  line-height: 15px;
+  /* line-height: 15px; */
+  line-height: normal;
   transform: translateY(25px);
   transition: .5s ease-in-out;
   letter-spacing: 0.5px;
+  word-wrap: normal;
  }
  .full-screen-portfolio .portfolio-item em {
   font-style: normal;
