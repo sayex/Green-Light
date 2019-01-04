@@ -19,6 +19,7 @@ $(document).ready(function () {
 
 //global varable to use in both Javascript files
 var auth = false;
+var topSpaceAdded = false;
 // get access token from spotify
 var access_token3 = "";
 if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
@@ -157,12 +158,22 @@ $("#submit").on("click", function (event) {
     var searchBands = $("#search").val();
     if (searchBands === "") {
         $("#search").attr("placeholder", "Required");
+        if (!topSpaceAdded) {
+            topSpaceAdded = true;
+            var topSpaceing = `<div style=height:80px;width:100%;clear:both;></div>`
+            $("#portfolio").prepend(topSpaceing);
+        }
     } else {
         searchBandsInTown(searchBands);
         spotifySearch(searchBands);
         $("#search").val("")
         $("#video-container").hide();
         $("#search").attr("placeholder", "Favorite Artist..");
+        if (!topSpaceAdded) {
+            topSpaceAdded = true;
+            var topSpaceing = `<div style=height:80px;width:100%;clear:both;></div>`
+            $("#portfolio").prepend(topSpaceing);
+        }
     }
 })
 

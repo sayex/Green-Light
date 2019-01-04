@@ -1,6 +1,5 @@
 function spotifySearch(userSearch) {
 
-
     var authHeader = "Bearer " + access_token3;
     var spotifyUrl = "https://api.spotify.com/v1/search?q=";
     var lastPartOfUrl = "&type=artist&market=US&limit=9&offset=0"
@@ -18,8 +17,9 @@ function spotifySearch(userSearch) {
 
         if (response.artists.items.length > 0) {
             albumsearch(response, authHeader)
-        } else $("#search").val("invalid results")
-
+        } else {
+            $("#search").val("invalid results")
+        }
     })
 }
 
@@ -52,13 +52,13 @@ function albumCreate(responseArtist) {
     $("#main-container").empty();
     resultsArtist = responseArtist.items
 
-
     for (var i = 0; i < resultsArtist.length; i++) {
         var albumId = resultsArtist[i].id;
         var resultsAlbumUrl = resultsArtist[i].images[1].url;
         var resultsAlbum = resultsArtist[i].external_urls.spotify;
         var albumName = resultsArtist[i].name;
         trackSearch(albumId, albumCount, resultsAlbum);
+
         var newImg = `<div class=col-md-4 col-sm-6>
     <div class=portfolio-item>
         <a href=${resultsAlbum} target=_blank><div class=thumb>
@@ -113,8 +113,8 @@ function trackSearch(albumId, albumCount, resultsAlbum) {
             }
         }
 
+        $(".tracks").hide()
     })
-    $(".tracks").hide()
 }
 // listener for track click for sample song playback
 $(document).on("click", ".theSong", function () {
