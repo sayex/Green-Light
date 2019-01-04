@@ -232,93 +232,10 @@ input.image:hover {
 }
 
 
-/* OLD SUBMIT BUTTON */
-/* nav .search-container button { */
-  /* padding: 6px; */
-  /* margin-top: 9px; */
-  /* margin-right: 16px; */
-  /* margin-left: 5px; */
-  /* font-weight: 300; */
-  /* color: #fff; */
-  /* border-radius: 5px; */
-  /* border: 1px solid #fff; */
-  /* background: transparent; */
-  /* cursor: pointer; */
-  /* position: relative; */
-  /* transition: background 0.5s; */
-  /* -webkit-overflow-scrolling: touch; */
-/* } */
-
-/* nav .search-container button:hover {
-  background: rgba(250, 250, 250, 0.2);
-} */
-
-
 h1 {
   line-height: normal;
   word-wrap: normal;
 }
-
-
-/* .menu-icon {
-  background: transparent;
-  border: 1px solid #fff;
-  width: 50px;
-  height: 50px;
-  margin: 15px 39px 0 auto;
-  position: relative;
-  cursor: pointer;
-  transition: background 0.5s;
-  border-radius: 5px;
-} */
-
-/* .menu-icon span,
-.menu-icon span:before,
-.menu-icon span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 2px;
-  width: 35px;
-  background: white;
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  display: block;
-  content: '';
-  transition: all 0.5s ease-in-out;
-} */
-
-/* .menu-icon span:before {
-  left: 0;
-  top: -10px;
-} */
-
-/* .menu-icon span:after {
-  left: 0;
-  top: 10px;
-} */
-
-/* .menu-icon.active {
-  background: rgba(250,250,250,0.2);
-} */
-
-/* .menu-icon.active span {
-  background-color: transparent;
-} */
-
-/* .menu-icon.active span:before,
-.menu-icon.active span:after {
-  top: 0;
-} */
-
-/* .menu-icon.active span:before {
-  transform: rotate(135deg);
-} */
-
-/* .menu-icon.active span:after {
-  transform: rotate(-135deg);
-} */
-
 
 
 /* MENU */
@@ -446,6 +363,7 @@ h1 {
   font-weight: 200;
 }
 #video-container .video-content .inner p {
+  /* text-transform: uppercase; */
   color: #fff;
   font-size: 28px;
   font-weight: 200;
@@ -457,9 +375,9 @@ h1 {
   color: #fff;
   text-decoration: underline;
 }
-#video-container .video-content .inner .scroll-icon {
+/* #video-container .video-content .inner .scroll-icon {
   margin-top: 45px;
-}
+} */
 
 
 /* PORTFOLIO */
@@ -489,8 +407,7 @@ h1 {
   color: #fff;
   display: inline-block;
   padding-left: 20px;
-  /* line-height: 15px; */
-  line-height: normal;
+  line-height: 20px;
   transform: translateY(25px);
   transition: .5s ease-in-out;
   letter-spacing: 0.5px;

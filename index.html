@@ -21,66 +21,65 @@
 </head>
 
 <body>
-    <!-- SDK -->
+  <!-- SDK -->
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
 
   <!-- NAVBAR -->
   <nav>
-      <div class="logo">
-          <a href="index.html">Green<em>Light</em></a>
-      </div>
-      <div id="player"></div>
-      <div id="bands">
-        <a tabindex="0" id="bandPopover" role="button" data-html="true" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Upcoming Concerts" data-content=""></a>
-      </div>
-      <div id="login">
-        <a href="/login"><button id="spotify">Log in with Spotify</button></a>
-      </div>
-      <form class="form-inline search-container">
-        <input type="text" id="search" placeholder="Favorite Artist.." name="search">
-        <a class="scrollTo" data-scrollTo="portfolio" role="button" type="submit" href="#">
-            <input type="image" src="assets/img/scroll-icon.png" class="image" id="submit" alt="">
-        </a>
-      </form>
+    <div class="logo">
+      <a href="index.html">Green<em>Light</em></a>
+    </div>
+    <div id="player"></div>
+    <div id="bands">
+      <a tabindex="0" id="bandPopover" role="button" data-html="true" data-toggle="popover" data-placement="bottom"
+        data-trigger="focus" title="Upcoming Concerts" data-content=""></a>
+    </div>
+    <div id="login">
+      <a href="/login"><button id="spotify">Log in with Spotify</button></a>
+    </div>
+    <form class="form-inline search-container">
+      <input type="text" id="search" placeholder="Favorite Artist.." name="search">
+      <a class="scrollTo" data-scrollTo="portfolio" role="button" type="submit" href="#">
+        <input type="image" src="assets/img/scroll-icon.png" class="image" id="submit" alt="">
+      </a>
+    </form>
   </nav>
 
   <!-- VIDEO CONTAINER -->
   <div id="video-container">
-      <div class="video-overlay"></div>
-      <div class="video-content">
-          <div class="inner">
-            <h1><em>Welcome to</em> Green<em>Light</em></h1>
-            <p>YOUR <strong>GREEN</strong>LIGHT ACCESS TO YOUR FAVORITE ARTISTS</p>
-              <div class="scroll-icon">
-                  <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="assets/img/scroll-icon.png" alt=""></a>
-              </div>    
-          </div>
+    <div class="video-overlay"></div>
+    <div class="video-content">
+      <div class="inner">
+        <h1><em>Welcome to</em> Green<em>Light</em></h1>
+        <p>YOUR <strong>GREEN</strong>LIGHT ACCESS TO YOUR FAVORITE ARTISTS | TOUR DATES</p>
+        <p>AND TURNS YOUR COMPUTER INTO REMOTE SPEAKERS FOR SPOTIFY</p>
       </div>
-      <video autoplay="true" loop="" muted>
-        <source src="assets/img/Light-Blast-GREEN.mp4" type="video/mp4" />
-      </video>   
+    </div>
+    <video autoplay="true" loop="" muted>
+      <source src="assets/img/Light-Blast-GREEN.mp4" type="video/mp4" />
+    </video>
   </div>
 
   <!-- PORTFOLIO -->
   <div class="full-screen-portfolio" id="portfolio">
-      <div class="container-fluid" id="main-container">
-        </div>
+    <div class="container-fluid" id="main-container">
+    </div>
   </div>
 
   <!-- FOOTER -->
   <footer>
-      <div class="container-fluid">
-          <div class="col-md-12">
-              <p>&copy; 2018 <strong>GREEN</strong>LIGHT | Design: <a rel="nofollow" href="https://github.com/sayex/Project1" target="_blank"><strong>SPACE</strong>INVADERS</a></p>
-          </div>
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <p>&copy; 2018 <strong>GREEN</strong>LIGHT | Design: <a rel="nofollow" href="https://github.com/sayex/Project1"
+            target="_blank"><strong>SPACE</strong>INVADERS</a></p>
       </div>
+    </div>
   </footer>
-
 
   <!-- MODAL BUTTON -->
   <div class="popup-icon">
     <button id="modBtn" class="modal-btn"><img src="assets/img/contact-icon.png" alt=""></button>
-  </div>  
+  </div>
 
   <!-- MODAL -->
   <div id="modal" class="modal">
@@ -89,74 +88,45 @@
       <!-- MODAL HEADER -->
       <div class="modal-header">
         <h3 class="header-title"><em>Say hello to</em> GREEN<em>LIGHT</em></h3>
-        <div class="close-btn"><img src="assets/img/close_contact.png" alt=""></div>    
+        <div class="close-btn"><img src="assets/img/close_contact.png" alt=""></div>
       </div>
       <!-- MODAL BODY -->
       <div class="modal-body">
         <div class="col-md-6 col-md-offset-3">
           <form id="contact" action="https://formspree.io/netoeric@aol.com" method="post">
-              <div class="row">
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="btn">Send Message Now</button>
-                    </fieldset>
-                  </div>
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                </fieldset>
               </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                    required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </div>
 
-  
-
-  <section class="overlay-menu">
-    <div class="container">
-      <div class="row">
-        <div class="main-menu">
-            <ul>
-                <li>
-                    <a href="index.html">Home - Full-width</a>
-                </li>
-                <li>
-                    <a href="masonry.html">Home - Masonry</a>
-                </li>
-                <li>
-                    <a href="grid.html">Home - Small-width</a>
-                </li>
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog Entries</a>
-                </li>
-                <li>
-                    <a href="single-post.html">Single Post</a>
-                </li>
-            </ul>
-            <p>We create awesome templates for you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SCRIPTS -->
-  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
 
   <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
@@ -165,12 +135,12 @@
   <script src="assets/js/vendor/bootstrap.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
-  
+
   <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-  
+
   <script src="assets/javascript/eric.js"></script>
   <script src="assets/javascript/stan.js"></script>
-  
+
 </body>
 
 </html>
