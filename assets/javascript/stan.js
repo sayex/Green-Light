@@ -16,7 +16,9 @@ function spotifySearch(userSearch) {
         }
     }).then(function (response) {
 
-        albumsearch(response, authHeader)
+        if (response.artists.items.length > 0) {
+            albumsearch(response, authHeader)
+        } else $("#search").val("invalid results")
 
     })
 }

@@ -34,7 +34,7 @@ if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
 window.onSpotifyWebPlaybackSDKReady = () => {
     const token = access_token3;
     const player = new Spotify.Player({
-        name: 'Web Playback Player',
+        name: 'Web Playback Player GreenLight',
         getOAuthToken: cb => {
             cb(token);
         }
@@ -155,10 +155,15 @@ $("#submit").on("click", function (event) {
     event.preventDefault();
     $("#player").empty();
     var searchBands = $("#search").val();
-    searchBandsInTown(searchBands);
-    spotifySearch(searchBands);
-    $("#search").val("")
-    $("#video-container").hide();
+    if (searchBands === "") {
+        $("#search").attr("placeholder", "Required");
+    } else {
+        searchBandsInTown(searchBands);
+        spotifySearch(searchBands);
+        $("#search").val("")
+        $("#video-container").hide();
+        $("#search").attr("placeholder", "Favorite Artist..");
+    }
 })
 
 //function to intergrate musixmatch at a later date
