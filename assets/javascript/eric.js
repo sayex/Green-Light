@@ -1,3 +1,23 @@
+//needed to use document.ready as this script loads in the header
+$(document).ready(function () {
+    // listener for the submit button
+    if (!auth) {
+        $(".search-container").hide();
+    }
+
+    //function to use popovers
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            container: 'body'
+        });
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
+    });
+
+});
+
+//global varable to use in both Javascript files
 var auth = false;
 // get access token from spotify
 var access_token3 = "";
@@ -9,7 +29,7 @@ if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/) !== null) {
     auth = true;
 };
 
-// Link access token to spoitify webPlayback SDK
+// Link access token to spoitify webPlayback SDK (provided by spotify and needs to load first.)
 
 window.onSpotifyWebPlaybackSDKReady = () => {
     const token = access_token3;
@@ -65,42 +85,12 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     player.connect();
 };
 
-$("#submit").on("click", function (event) {
-    event.preventDefault();
-
-    var searchBands = $("#search").val();
-    searchBandsInTown(searchBands);
-    spotifySearch(searchBands);
-    $("#search").val("")
-})
-
-$(document).ready(function () {
-    // listener for the submit button
-    if (!auth) {
-        $(".search-container").hide();
-    }
-
-    //function to use popovers
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            container: 'body'
-        });
-        $('.popover-dismiss').popover({
-            trigger: 'focus'
-        })
-    })
-
-})
 //function to create popouttext in popover
-
 function popoutButton(response) {
-    console.log(response)
     var popoverText = "";
     var lineup = "";
     var showTourDates = "Tour Dates";
     if (response.length > 0) {
-
-
         for (var i = 0; i < response.length; i++) {
             var offersUrl;
             if (response[i].offers.length !== 0) {
@@ -124,12 +114,12 @@ function popoutButton(response) {
             } else {
                 var venueLink = `</li></ul></div>`
             }
-            popoverText = popoverText + venueLink
+            popoverText = popoverText + venueLink;
         }
     } else {
-        popoverText = ""
-        lineup = ""
-        showTourDates = ""
+        popoverText = "";
+        lineup = "";
+        showTourDates = "";
 
     }
     $("#bandPopover").text(showTourDates);
@@ -138,7 +128,6 @@ function popoutButton(response) {
 }
 
 // ajax call to get bands in town info
-
 function searchBandsInTown(artist) {
 
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=project1UT13543&date=upcoming"
@@ -149,20 +138,28 @@ function searchBandsInTown(artist) {
         })
         .then(function (response) {
 
-
             popoutButton(response);
 
         });
 }
 
-
+// listener for track info to show and hide
 $(document).on("mouseenter", ".portfolio-item", function () {
     $(this).children().children().children().children(".tracks").show();
 }).on("mouseleave", ".portfolio-item", function () {
     $(this).children().children().children().children(".tracks").hide();
 })
 
-
+//search listner
+$("#submit").on("click", function (event) {
+    event.preventDefault();
+    $("#player").empty();
+    var searchBands = $("#search").val();
+    searchBandsInTown(searchBands);
+    spotifySearch(searchBands);
+    $("#search").val("")
+    $("#video-container").hide();
+})
 
 //function to intergrate musixmatch at a later date
 // function musixmatch() {
