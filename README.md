@@ -2,14 +2,10 @@
 
 ![alt text](http://url/to/img/GREENLIGHT.png)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
+## Spotify and Bandsintown
+This app utilizes the Spotify and Bandsintown API to allow users to search for music, search for bandsintown and tour dates, 
 
-## Development server
-Run `node app.js` for a dev server. Navigate to `http://http://localhost:8888/`. The app will automatically reload if you change any of the source files.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## The SDKs Structure
 
