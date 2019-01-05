@@ -6,12 +6,12 @@
 <!-- ![alt text](http://url/to/img/GREENLIGHT.png) -->
 <!-- ![image](https://cloud.githubusercontent.com/assets/img/GREENLIGHT.png) -->
 
-## SPOTIFY AND BANDSINTOWN
+## SPOTIFY AND BANDSINTOWN API
 This app utilizes the Spotify and Bandsintown API to allow users to search for music, bandsintown, tour dates, and turn your computer into remote speakers for Spotify.
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
 ## YOUR GREENLIGHT ACCESS
-For your GreenLight access [](https://github.com/user/repo/blob/branch/bootcampgreenlight.herokuapp.com)
+Click here for your [GREENLIGHT](https://github.com/bootcampgreenlight.herokuapp.com) access.
 
 ## THE SDKs STRUCTURE
 
