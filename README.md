@@ -34,4 +34,4 @@ This library can play music from Spotify after the user logs in with the access 
 
  - [ChereeNielson](https://github.com/ChereeNielson) for [all front end desigh](https://github.com/sayex/Project1/tree/chereehtml)
  - [EricSayex](https://github.com/sayex) for [APIs, back end design, and Heroku hosting](https://github.com/sayex/Project1/tree/ericbranch)
- - [StanBakalov](https://github.com/shantanugoel) for [APIs and back end design](https://github.com/sayex/Project1/tree/stansBranch)
+ - [StanBakalov](https://github.com/sunnybakalov) for [APIs and back end design](https://github.com/sayex/Project1/tree/stansBranch)
