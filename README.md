@@ -28,7 +28,7 @@ SPOTIFY PLAYER LIBRARY
 ----------------------
 
 This library can play music from Spotify after the user logs in with the access token.
-**Only Premium Spotify users will be able to log in and play music with this library.**.
+**Only Spotify account users will be able to log in and play music with this library.**.
 
 ## CREDITS
 
