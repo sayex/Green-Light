@@ -1,7 +1,7 @@
 # GREENLIGHT
 
 <p align="center">
-<img align="center" src="/assets/img/HeadFullOfDreams.png" width="100%"/>
+<img align="center" src="/assets/img/GREENLIGHT.png" width="100%"/>
 </p>
 
 ## SPOTIFY AND BANDSINTOWN API
