@@ -3,8 +3,6 @@
 <p align="center">
 <img align="center" src="/assets/img/GreatDay.png" width="100%"/>
 </p>
-<!-- ![alt text](http://url/to/img/GREENLIGHT.png) -->
-<!-- ![image](https://cloud.githubusercontent.com/assets/img/GREENLIGHT.png) -->
 
 ## SPOTIFY AND BANDSINTOWN API
 This app utilizes the Spotify and Bandsintown API to allow users to search for music, bandsintown, tour dates, and turn your computer into remote speakers for Spotify.
@@ -32,6 +30,8 @@ Spotify Player Library
 This library can play music from Spotify after the user logs in with the access token.
 **Only Premium Spotify users will be able to log in and play music with this library.**.
 
-## Further help
+## CREDITS
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ - [ChereeNielson](https://github.com/ChereeNielson) for [all front end desigh](https://github.com/sayex/Project1/tree/chereehtml)
+ - [EricSayex](https://github.com/sayex) for [APIs, back end design, and Heroku hosting](https://github.com/sayex/Project1/tree/ericbranch)
+ - [StanBakalov](https://github.com/shantanugoel) for [APIs and back end design](https://github.com/sayex/Project1/tree/stansBranch)
