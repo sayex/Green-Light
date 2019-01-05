@@ -1,11 +1,13 @@
 # GREENLIGHT
 
-![alt text](http://url/to/img/GREENLIGHT.png)
+<!-- ![alt text](http://url/to/img/GREENLIGHT.png) -->
+![image](https://cloud.githubusercontent.com/assets/img/GREENLIGHT.png)
 
 ## Spotify and Bandsintown
 This app utilizes the Spotify and Bandsintown API to allow users to search for music, search for bandsintown and tour dates, 
 
-
+## YOUR GREENLIGHT ACCESS
+Your GreenLight access is bootcampgreenlight.herokuapp.com 
 
 ## The SDKs Structure
 
