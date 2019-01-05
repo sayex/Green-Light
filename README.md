@@ -9,7 +9,7 @@ This app utilizes the Spotify and Bandsintown API to allow users to search for m
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
 ## YOUR GREENLIGHT ACCESS
-Click here for your [GREENLIGHT](https://github.com/bootcampgreenlight.herokuapp.com) access.
+Click here for your [GREENLIGHT](github.com/bootcampgreenlight.herokuapp.com) access.
 
 ## THE SDKs STRUCTURE
 
@@ -18,13 +18,13 @@ One of them handles authentication flow and the other one manages audio playback
 The libraries work well together but can also be used separately, for example if
 the application doesn't need to play music it can use just Spotify Authentication module by itself.
 
-Spotify Authentication Library
+SPOTIFY AUTHENTICATION LIBRARY
 ------------------------------
 
 This library is responsible for authenticating the user and fetching the access token
 that can subsequently be used to play music or be used in requests to the Spotify Web API.
 
-Spotify Player Library
+SPOTIFY PLAYER LIBRARY
 ----------------------
 
 This library can play music from Spotify after the user logs in with the access token.
