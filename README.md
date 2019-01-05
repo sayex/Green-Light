@@ -1,7 +1,7 @@
 # GREENLIGHT
 
 <p align="center">
-<img align="center" src="/assets/img/GREENLIGHT.png" width="100%"/>
+<img align="center" src="/assets/img/GreatDay.png" width="100%"/>
 </p>
 <!-- ![alt text](http://url/to/img/GREENLIGHT.png) -->
 <!-- ![image](https://cloud.githubusercontent.com/assets/img/GREENLIGHT.png) -->
