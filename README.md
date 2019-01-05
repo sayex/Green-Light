@@ -8,7 +8,7 @@ This app utilizes the Spotify and Bandsintown API to allow users to search for m
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
 ## YOUR GREENLIGHT ACCESS
-[For your GreenLight access] (http://bootcampgreenlight.herokuapp.com)
+For your GreenLight access [a link](https://github.com/user/repo/blob/branch/bootcampgreenlight.herokuapp.com)
 
 ## THE SDKs STRUCTURE
 
