@@ -13,7 +13,7 @@ To minimize user effort by combining a streaming platform with an easy way to fi
 To streamline the process of finding out useful information (songs, albums, tour dates, lyrics) and putting it into 1 place.
 
 ## YOUR GREENLIGHT ACCESS
-Click here for your [GREENLIGHT](http://github.com/bootcampgreenlight.herokuapp.com) access.
+Click here for your [GREENLIGHT](https://bootcampgreenlight.herokuapp.com) access.
 
 ## THE SDKs STRUCTURE
 
