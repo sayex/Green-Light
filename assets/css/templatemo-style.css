@@ -360,13 +360,15 @@ h1 {
   font-weight: 200;
 }
 #video-container .video-content .inner p {
-  /* text-transform: uppercase; */
   color: #fff;
   font-size: 28px;
   font-weight: 200;
   letter-spacing: 1.5px;
   text-align: center;
   padding: 0px 30px;
+}
+#video-container .video-content .inner p:last-child {
+  font-size: 150%;
 }
 #video-container .video-content .inner a {
   color: #fff;
