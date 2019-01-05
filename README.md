@@ -8,6 +8,10 @@
 This app utilizes the Spotify and Bandsintown API to allow users to search for music, bandsintown, tour dates, and turn your computer into remote speakers for Spotify.
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
+## GOALS
+To minimize user effort by combining a streaming platform with an easy way to find out artist tour dates, & song lyrics (in the future).
+To streamline the process of finding out useful information (songs, albums, tour dates, lyrics) and putting it into 1 place.
+
 ## YOUR GREENLIGHT ACCESS
 Click here for your [GREENLIGHT](http://github.com/bootcampgreenlight.herokuapp.com) access.
 
