@@ -1,7 +1,7 @@
 # GREENLIGHT
 
 <p align="center">
-<img align="center" src="/assets/img/GREENLIGHT.PNG" width="100%"/>
+<img align="center" src="/assets/img/GREENLIGHT.gif" width="100%"/>
 </p>
 
 ## SPOTIFY AND BANDSINTOWN API
@@ -14,6 +14,10 @@ To streamline the process of finding out useful information (songs, albums, tour
 
 ## YOUR GREENLIGHT ACCESS
 Click here for your [GREENLIGHT](https://bootcampgreenlight.herokuapp.com) access.
+
+<p align="center">
+<img align="center" src="/assets/img/GREENLIGHT.PNG" width="100%"/>
+</p>
 
 ## THE SDKs STRUCTURE
 
