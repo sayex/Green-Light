@@ -9,12 +9,12 @@ This app utilizes the Spotify and Bandsintown API to allow users to search for m
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
 ## GOALS
-* To minimize user effort by combining a streaming platform with an easy way to find out artist tour dates, & song lyrics (in the future).
-* To streamline the process of finding out useful information (songs, albums, tour dates, lyrics) and putting it into 1 place.
+* To minimize user effort by combining a streaming platform with an easy way to find/access music and tour dates of your favorite artists. , & song lyrics (in the future).
+* To streamline the process of accessing albums, songs, and tour dates of/for/to your favorite artists all in one place. (We plan to add song lyrics in the future)
 
 ## DESIGN PROCESS
-* Our process was to first create an aesthetically pleasing front end and then apply bits of the backend functionality to it little by little.
-* We first started with displaying an artist's picture. We then displayed the artists's albums as well as the option to receive track information. 
+* Our process was to first create an aesthetically pleasing front end and then apply bits of the back end functionality to it little by little.
+* We first started with displaying an artist's picture. We then displayed the artist's albums as well as the option to receive track information. 
 * We also included Bandsintown so that the user can see when and where the artist is touring next and purchase tickets if desired.
 * Finally, we added play functionality so that the user can hear a 30 second snippet of their favorite songs. 
 * If the user likes the song, they can click on the album cover and be redirected to Spotify where they're able to listen to the full song, add the song to a playlist, or download the song for offline listening. 
@@ -52,7 +52,7 @@ SPOTIFY PLAYER LIBRARY
 ----------------------
 
 This library can play music from Spotify after the user logs in with the access token.
-**Only Spotify account users will be able to log in and play music with this library.**.
+**Only Spotify account users will be able to log in and play music with this library.**
 
 ## CREDITS
 
