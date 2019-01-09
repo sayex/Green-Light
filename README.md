@@ -5,12 +5,13 @@
 </p>
 
 ## SPOTIFY AND BANDSINTOWN API
-This app utilizes the Spotify and Bandsintown API to allow users to search for music, bandsintown, tour dates, and turn your computer into remote speakers for Spotify.
+This app utilizes the Spotify and Bandsintown API to allow users to search for music, bands in town, tour dates, and turn your computer into remote speakers for Spotify.
 Please note that the Spotify API only provides 30 second audio snippets. It may be possible to get the full track by using the [Web Playback SDK](https://beta.developer.spotify.com/documentation/web-playback-sdk/).
 
 ## GOALS
-* To minimize user effort by combining a streaming platform with an easy way to find/access music and tour dates of your favorite artists. , & song lyrics (in the future).
-* To streamline the process of accessing albums, songs, and tour dates of/for/to your favorite artists all in one place. (We plan to add song lyrics in the future)
+* To minimize user effort by combining a streaming platform with an easy way to find/access music and tour dates of your favorite artists.
+* To streamline the process of accessing albums, songs, and tour dates of/for/to your favorite artists all in one place. 
+* We plan to add song lyrics in the future.
 
 ## DESIGN PROCESS
 * Our process was to first create an aesthetically pleasing front end and then apply bits of the back end functionality to it little by little.
