@@ -12,9 +12,11 @@ var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+require('dotenv').config()
+var keys = require("./keys.js");
 
-var client_id = '3525413717b6427d86da66272560db4b'; // Your client id
-var client_secret = '3f008bce38a046a184e32967fa40b363'; // Your secret
+var client_id = keys.spotify.id; // Your client id
+var client_secret = keys.spotify.secret; // Your secret
 var redirect_uri = 'https://bootcampgreenlight.herokuapp.com/callback'; // Your redirect uri
 
 /**
